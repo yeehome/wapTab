@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>手机滑屏tab菜单自适应高度，菜单内容级联滑动（tab超过屏幕宽度可自动滑动）</title>
+<style type="text/css">
+* {
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* Tab切换 */
+.tabBox .navhd {
+	height: 44px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	line-height: 44px;
+	-moz-box-flex: 1;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+.tabBox .hd {
+	position: absolute;
+	left: auto;
+}
+.tabBox .hd ul {
+	position: relative;
+	white-space: nowrap;
+}
+.tabBox .hd ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.tabBox .hd ul li a {
+	display: block;
+	padding: 0 10px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: solid 2px #eee;
+	color: #666;
+}
+.tabBox .hd ul li.on a {
+	color: #48a5f4 !important;
+	border-bottom: solid 2px #48a5f4;
+}
+.tabBox .con{padding:0 10px;}
+.tabBox .bd li{ padding: 10px 0; border-bottom:dotted 1px #eee;}
+</style>
+</head>
+
+<body>
+<div id="tabBox1" class="tabBox">
+  <div class="navhd">
+    <div class="hd hdi">
+      <ul id="navi">
+        <li><a href="javascript:void(0)">四大基本交易策略</a></li>
+        <li><a href="javascript:void(0)">避险型交易策略</a></li>
+        <li><a href="javascript:void(0)">牛市交易策略</a></li>
+        <li><a href="javascript:void(0)">熊市交易策略</a></li>
+        <li><a href="javascript:void(0)">突破市交易策略</a></li>
+        <li><a href="javascript:void(0)">盘整市交易策略</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bd" id="tabBox1-bd">
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">官方明确感染H7N9高危人群</a></li>
+        <li><a href="#">台官员:将驱离进入钓岛大陆船</a></li>
+        <li><a href="#">陈云长子吁学江泽民思想方法</a></li>
+        <li><a href="#">央视批抗日剧目:比着俗争着二</a></li>
+        <li><a href="#">网友:离3次结3次可避税国五条</a></li>
+        <li><a href="#">足疗女子自称东北人引发血案</a></li>
+        <li><a href="#">男性神秘“根浴”会所被调查</a></li>
+        <li><a href="#">女孩一年吃掉48公里长方便面</a></li>
+      </ul>
+    </div>
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">日:沈阳军区部队开赴中朝边境</a></li>
+        <li><a href="#">印度核潜艇经我周边未被发现</a></li>
+        <li><a href="#">中国航母战斗群重防空轻反潜</a></li>
+        <li><a href="#">日本军车爆车胎造成一死一伤</a></li>
+      </ul>
+    </div>
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">农业占GDP低政府支持力度大</a></li>
+        <li><a href="#">林志玲:至今珍藏本山送的手绢</a></li>
+        <li><a href="#">五粮液高管年薪超茅台近一倍</a></li>
+        <li><a href="#">视频:朝鲜导弹反复出舱</a></li>
+        <li><a href="#">《我是歌手》明晚决赛开战</a></li>
+        <li><a href="#">皖新传媒一年花13亿委托理财</a></li>
+      </ul>
+    </div>
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">农业占GDP低政府支持力度大</a></li>
+        <li><a href="#">林志玲:至今珍藏本山送的手绢</a></li>
+        <li><a href="#">五粮液高管年薪超茅台近一倍</a></li>
+        <li><a href="#">视频:朝鲜导弹反复出舱</a></li>
+        <li><a href="#">《我是歌手》明晚决赛开战</a></li>
+        <li><a href="#">皖新传媒一年花13亿委托理财</a></li>
+      </ul>
+    </div>
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">农业占GDP低政府支持力度大</a></li>
+        <li><a href="#">林志玲:至今珍藏本山送的手绢</a></li>
+        <li><a href="#">视频:朝鲜导弹反复出舱</a></li>
+        <li><a href="#">《我是歌手》明晚决赛开战</a></li>
+        <li><a href="#">皖新传媒一年花13亿委托理财</a></li>
+      </ul>
+    </div>
+    <div class="con"><!-- 高度自适应需添加外层 -->
+      <ul>
+        <li><a href="#">林志玲:至今珍藏本山送的手绢</a></li>
+        <li><a href="#">视频:朝鲜导弹反复出舱</a></li>
+        <li><a href="#">《我是歌手》明晚决赛开战</a></li>
+        <li><a href="#">皖新传媒一年花13亿委托理财</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p align="center">更多</p>
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script> 
+<script type="text/javascript">
+var nav_w=$(".hdi li").first().width();
+$(".hdi li").on('click', function(){
+	nav_w=$(this).width();
+	$(this).addClass("on").siblings().removeClass("on");
+	var fn_w = ($(".navhd").width() - nav_w) / 2;
+	var fnl_l;
+	var fnl_x = parseInt($(this).position().left);
+	if (fnl_x <= fn_w){
+		fnl_l = 0;
+	}else if(fn_w - fnl_x <= flb_w - fl_w) {
+		fnl_l = flb_w - fl_w;
+	}else{
+		fnl_l = fn_w - fnl_x;
+	}
+	$(".hdi").animate({"left" : fnl_l}, 300);
+	
+});
+var fl_w=$(".hdi").width();
+var flb_w=$(".navhd").width();
+$(".hdi").on('touchstart', function (e) {
+	var touch1 = e.originalEvent.targetTouches[0];
+	x1 = touch1.pageX;
+	y1 = touch1.pageY;
+	ty_left = parseInt($(this).css("left"));	
+});
+$(".hdi").on('touchmove', function (e) {
+	var touch2 = e.originalEvent.targetTouches[0];
+	var x2 = touch2.pageX;
+	var y2 = touch2.pageY;
+	if(ty_left + x2 - x1>=0){
+		$(this).css("left", 0);
+	}else if(ty_left + x2 - x1<=flb_w-fl_w){
+		$(this).css("left", flb_w-fl_w);
+	}else{
+		$(this).css("left", ty_left + x2 - x1);
+	}
+	if(Math.abs(y2-y1)>0){
+		e.preventDefault();
+	}	
+});
+TouchSlide( { slideCell:"#tabBox1",
+	endFun:function(i){ 
+		//联动切换
+		var as=document.getElementById("navi").getElementsByTagName('a');
+		fnl_x =  parseInt($(".hdi li").eq(i).position().left);		
+		nav_w=$(".hdi li").eq(i).width();		
+		$(".hdi li").eq(i).addClass("on").siblings().removeClass("on");
+		var fn_w = ($(".navhd").width() - nav_w) / 2;
+		var fnl_l;
+		if (fnl_x <= fn_w) {
+			fnl_l = 0;
+		} else if (fn_w - fnl_x <= flb_w - fl_w) {
+			fnl_l = flb_w - fl_w;
+		} else {
+			fnl_l = fn_w - fnl_x;
+		}
+		$(".hdi").animate({"left" : fnl_l}, 300);
+		
+		//高度自适应		
+		var bd = document.getElementById("tabBox1-bd");
+		bd.parentNode.style.height = bd.children[i].children[0].offsetHeight+"px";
+		if(i>0)bd.parentNode.style.transition="200ms";//添加动画效果
+	}
+});
+</script>
+</body>
+</html>
